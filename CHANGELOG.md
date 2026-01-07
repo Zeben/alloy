@@ -1,5 +1,29 @@
 # Changelog
 
+## [1.13.0](https://github.com/grafana/alloy/compare/v1.12.1...v1.13.0) (2026-01-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* `otelcol.exporter` > `sending_queue` > `batch` > `min_size` changed from `8192` to `2000` and `max_size` changed from `0` to `3000`
+
+### Features 🌟
+
+* Add missing configuration parameter `deployment_name_from_replicaset` to k8sattributes processor ([#5183](https://github.com/grafana/alloy/issues/5183)) ([b54ca77](https://github.com/grafana/alloy/commit/b54ca777eed56cbbd7f76ed84e71f7b7174747c5))
+* Change the defaults for `sending_queue` &gt; `batch` block inside `otelcol.exporter` components ([#5061](https://github.com/grafana/alloy/issues/5061)) ([714a2ed](https://github.com/grafana/alloy/commit/714a2ed6c57b3aa7172b8da194caf1fe8a724680))
+* **database_observability:** Stop tracking own instrumentation queries ([#4991](https://github.com/grafana/alloy/issues/4991)) ([0b55557](https://github.com/grafana/alloy/commit/0b55557657fa3e9f1a3463444c372b6fdde4bcf2))
+* **loki.source.syslog:** Support cisco-specific syslog fields ([#5165](https://github.com/grafana/alloy/issues/5165)) ([3230ba0](https://github.com/grafana/alloy/commit/3230ba0560991c28e267e0f27c5f6ac3a2be5242))
+* **loki.source.syslog:** Support raw format ([#5140](https://github.com/grafana/alloy/issues/5140)) ([923d127](https://github.com/grafana/alloy/commit/923d127c50949f88a37ac808154240de0649df09))
+* **mixin:** Provide rendered mixin outputs ([#5118](https://github.com/grafana/alloy/issues/5118)) ([738b9fb](https://github.com/grafana/alloy/commit/738b9fb4e99595d5d202db9dbc89f71e95402ce0))
+
+
+### Bug Fixes 🐛
+
+* **database_observability:** Improve postgres version parsing for explain plans in database_observability component ([#5131](https://github.com/grafana/alloy/issues/5131)) ([23c7f37](https://github.com/grafana/alloy/commit/23c7f37afc25dabe267bb60d8b0ee0473f073e5b))
+* Perform drain when file is deleted in tail package ([#5139](https://github.com/grafana/alloy/issues/5139)) ([2e48867](https://github.com/grafana/alloy/commit/2e48867c639c5170c547443f16227133d6c6f604))
+* Preserve meta labels in loki.source.podlogs ([#5097](https://github.com/grafana/alloy/issues/5097)) ([23d787c](https://github.com/grafana/alloy/commit/23d787c5c607a077dbb28dd382e6543aeee115fe))
+* Show correct fallback alloy version instead of v1.13.0 ([#5110](https://github.com/grafana/alloy/issues/5110)) ([e2e96e9](https://github.com/grafana/alloy/commit/e2e96e95ff0dab600befbe63165e10eea096b968))
+
 ## [1.12.1](https://github.com/grafana/alloy/compare/v1.12.0...v1.12.1) (2025-12-15)
 
 
